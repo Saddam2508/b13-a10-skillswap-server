@@ -3,9 +3,9 @@ import cors from "cors";
 import express from "express";
 
 import logger from "./middleware/logger.js";
-// import { authRoute } from "./modules/auth/auth.route";
-// import { userRoute } from "./modules/user/user.route";
+
 import globalErrorHandler from "./middleware/globalErrorHandler.js";
+import { tasksRoute } from "./modules/tasks/tasks.route.js";
 
 const app = express();
 
@@ -30,8 +30,7 @@ app.get("/", (req, res) => {
   });
 });
 
-// app.use("/api/users", userRoute);
-// app.use("/api/auth", authRoute);
+app.use("/api/tasks", tasksRoute);
 
 // Global Error Handling Middleware
 app.use(globalErrorHandler);

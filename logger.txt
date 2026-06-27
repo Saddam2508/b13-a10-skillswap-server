@@ -30,3 +30,33 @@ Method -> GET - Time -> 1782314004063 - URL -> /api/tasks?
 Method -> GET - Time -> 1782314011039 - URL -> /api/tasks?
 
 Method -> GET - Time -> 1782315683630 - URL -> /api/tasks?
+
+Method -> POST - Time -> 1782351885352 - URL -> /api/tasks
+
+Method -> GET - Time -> 1782352109214 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782352275813 - URL -> /api/tasks?category=Development
+
+Method -> GET - Time -> 1782352447199 - URL -> /api/tasks?category=Development
+
+Method -> GET - Time -> 1782352447238 - URL -> /api/tasks?category=Development
+
+Method -> GET - Time -> 1782352452343 - URL -> /api/tasks?category=Development
+
+Method -> GET - Time -> 1782352993979 - URL -> /api/tasks?category=Development
+
+Method -> GET - Time -> 1782530521671 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782531273166 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782531273209 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782532056243 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782532229778 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782532543505 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782532543585 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782532937228 - URL -> /api/tasks?

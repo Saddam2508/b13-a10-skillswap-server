@@ -17,7 +17,10 @@ app.use(logger);
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:3000", // ✅
+    origin:
+      process.env.CLIENT_URL ||
+      "http://localhost:3000" ||
+      "https://b13-a10-skillswap.vercel.app", // ✅
     credentials: true,
   }),
 );

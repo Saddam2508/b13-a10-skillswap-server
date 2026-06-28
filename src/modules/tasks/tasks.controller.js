@@ -4,8 +4,14 @@ import { tasksService } from "./tasks.service.js";
 const getAllTasks = async (req, res) => {
   try {
     const search = req.query.search;
-    const type = req.query.type;
-    const result = await tasksService.getAllTasksFromDB(search, type);
+    const category = req.query.category;
+    const limit = req.query.limit ? parseInt(req.query.limit) : null;
+
+    const result = await tasksService.getAllTasksFromDB(
+      search,
+      category,
+      limit,
+    );
     res.status(200).json({
       success: true,
       message: "Users retrived successfully!",

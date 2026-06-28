@@ -6,6 +6,7 @@ import logger from "./middleware/logger.js";
 
 import globalErrorHandler from "./middleware/globalErrorHandler.js";
 import { tasksRoute } from "./modules/tasks/tasks.route.js";
+import { usersRoute } from "./modules/users/users.route.js";
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/tasks", tasksRoute);
+app.use("/api/users", usersRoute);
 
 // Global Error Handling Middleware
 app.use(globalErrorHandler);

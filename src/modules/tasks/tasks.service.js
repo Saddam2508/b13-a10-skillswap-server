@@ -1,23 +1,35 @@
 import { tasksCollection } from "../../db/db.js";
 
-const getAllTasksFromDB = async (search, type) => {
+const getAllTasksFromDB = async (search, category, limit) => {
   const query = {};
 
   if (search) {
-    query.facilityName = { $regex: search, $options: "i" };
+    query.title = { $regex: search, $options: "i" };
   }
 
-  if (type) {
-    query.facilityType = { $in: [type] };
+  if (category && category !== "all") {
+    query.category = category;
   }
 
-  const allTasks = await tasksCollection.find(query).toArray();
-  return allTasks;
+  let cursor = tasksCollection.find(query);
+
+  if (limit) {
+    cursor = cursor.limit(limit);
+  }
+
+  return await cursor.toArray();
 };
 
 const createTaskInDB = async (taskData) => {
-  const { title, category, description, budget, deadline, client_email } =
-    taskData;
+  const {
+    title,
+    category,
+    description,
+    budget,
+    deadline,
+    client_name,
+    client_email,
+  } = taskData;
 
   if (
     !title ||
@@ -25,6 +37,7 @@ const createTaskInDB = async (taskData) => {
     !description ||
     !budget ||
     !deadline ||
+    !client_name ||
     !client_email
   ) {
     throw new Error("All fields are required.");
@@ -36,6 +49,7 @@ const createTaskInDB = async (taskData) => {
     description,
     budget: Number(budget),
     deadline,
+    client_name,
     client_email,
     status: "open",
     createdAt: new Date(),

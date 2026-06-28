@@ -49,11 +49,15 @@ const createTask = async (req, res) => {
 };
 
 const getMyTasks = async (req, res) => {
+  console.log(req)
   try {
     const email = req.query.email;
+    
+    console.log(email)
     if (!email) return res.status(400).json({ success: false, message: "Email required" });
  
     const result = await tasksService.getMyTasksFromDB(email);
+    console.log(result)
     res.status(200).json({ success: true, data: result });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });

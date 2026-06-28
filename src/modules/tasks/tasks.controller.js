@@ -6,23 +6,18 @@ const getAllTasks = async (req, res) => {
     const search = req.query.search;
     const category = req.query.category;
     const limit = req.query.limit ? parseInt(req.query.limit) : null;
+    const page = req.query.page ? parseInt(req.query.page) : 1;
 
-    const result = await tasksService.getAllTasksFromDB(
-      search,
-      category,
-      limit,
-    );
+    const result = await tasksService.getAllTasksFromDB(search, category, limit, page);
+
     res.status(200).json({
       success: true,
-      message: "Users retrived successfully!",
-      data: result,
+      message: "Tasks retrieved successfully!",
+      data: result.tasks,
+      total: result.total,  
     });
   } catch (error) {
-    res.status(500).json({
-      success: false,
-      message: error.message,
-      error: error,
-    });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 

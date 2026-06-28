@@ -1,24 +1,30 @@
 import { tasksCollection } from "../../db/db.js";
 import { ObjectId } from "mongodb";
 
-const getAllTasksFromDB = async (search, category, limit) => {
+const getAllTasksFromDB = async (search, category, limit, page = 1) => {
   const query = {};
+  if (search) query.title = { $regex: search, $options: "i" };
+  if (category && category !== "all") query.category = category;
 
-  if (search) {
-    query.title = { $regex: search, $options: "i" };
-  }
+  const total = await tasksCollection.countDocuments(query);
 
-  if (category && category !== "all") {
-    query.category = category;
-  }
+  const skip = limit ? (page - 1) * limit : 0;
+  let cursor = tasksCollection.find(query).skip(skip);
+  if (limit) cursor = cursor.limit(limit);
 
-  let cursor = tasksCollection.find(query);
+  const tasks = await cursor.toArray();
 
-  if (limit) {
-    cursor = cursor.limit(limit);
-  }
+  // ✅ ObjectId এবং Date serialize করো
+  const serialized = tasks.map(task => ({
+    ...task,
+    _id: task._id.toString(),
+    createdAt: task.createdAt?.toISOString() || null,
+    deadline: typeof task.deadline === 'object' && task.deadline instanceof Date
+      ? task.deadline.toISOString()
+      : task.deadline,
+  }));
 
-  return await cursor.toArray();
+  return { tasks: serialized, total };
 };
 
 const getTaskByIdFromDB = async (id) => {

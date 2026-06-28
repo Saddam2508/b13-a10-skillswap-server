@@ -296,3 +296,7 @@ Method -> GET - Time -> 1782655061720 - URL -> /api/tasks/my-tasks?email=eyarins
 Method -> GET - Time -> 1782655982613 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
 
 Method -> GET - Time -> 1782655983307 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782663548688 - URL -> /
+
+Method -> GET - Time -> 1782663548940 - URL -> /favicon.ico

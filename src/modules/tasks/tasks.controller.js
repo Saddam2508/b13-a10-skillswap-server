@@ -26,6 +26,20 @@ const getAllTasks = async (req, res) => {
   }
 };
 
+const getTaskById = async (req, res) => {
+  try {
+    const result = await tasksService.getTaskByIdFromDB(req.params.id);
+    if (!result) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Task not found" });
+    }
+    res.status(200).json({ success: true, data: result });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
 const createTask = async (req, res) => {
   try {
     const result = await tasksService.createTaskInDB(req.body);
@@ -41,5 +55,6 @@ const createTask = async (req, res) => {
 
 export const tasksController = {
   getAllTasks,
+  getTaskById,
   createTask,
 };

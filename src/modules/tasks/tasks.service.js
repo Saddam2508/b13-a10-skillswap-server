@@ -1,4 +1,5 @@
 import { tasksCollection } from "../../db/db.js";
+import { ObjectId } from "mongodb";
 
 const getAllTasksFromDB = async (search, category, limit) => {
   const query = {};
@@ -18,6 +19,10 @@ const getAllTasksFromDB = async (search, category, limit) => {
   }
 
   return await cursor.toArray();
+};
+
+const getTaskByIdFromDB = async (id) => {
+  return await tasksCollection.findOne({ _id: new ObjectId(id) });
 };
 
 const createTaskInDB = async (taskData) => {
@@ -61,5 +66,6 @@ const createTaskInDB = async (taskData) => {
 
 export const tasksService = {
   getAllTasksFromDB,
+  getTaskByIdFromDB,
   createTaskInDB,
 };

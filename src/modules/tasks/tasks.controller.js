@@ -48,8 +48,42 @@ const createTask = async (req, res) => {
   }
 };
 
+const getMyTasks = async (req, res) => {
+  try {
+    const email = req.query.email;
+    if (!email) return res.status(400).json({ success: false, message: "Email required" });
+ 
+    const result = await tasksService.getMyTasksFromDB(email);
+    res.status(200).json({ success: true, data: result });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+ 
+const updateTask = async (req, res) => {
+  try {
+    const result = await tasksService.updateTaskInDB(req.params.id, req.body);
+    res.status(200).json({ success: true, data: result });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+ 
+const deleteTask = async (req, res) => {
+  try {
+    await tasksService.deleteTaskFromDB(req.params.id);
+    res.status(200).json({ success: true, message: "Task deleted" });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+ 
+
 export const tasksController = {
   getAllTasks,
   getTaskById,
   createTask,
+  getMyTasks,
+  updateTask,
+  deleteTask
 };

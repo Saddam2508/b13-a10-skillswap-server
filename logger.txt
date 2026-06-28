@@ -252,3 +252,19 @@ Method -> GET - Time -> 1782647713998 - URL -> /api/tasks?
 Method -> GET - Time -> 1782647726289 - URL -> /api/tasks?page=2
 
 Method -> GET - Time -> 1782647731099 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782651103606 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782651104387 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782651117122 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782651250778 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782651444211 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782651444516 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782651459286 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782651544749 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com

@@ -70,8 +70,36 @@ const createTaskInDB = async (taskData) => {
   return { ...newTask, _id: result.insertedId };
 };
 
+
+
+const getMyTasksFromDB = async (email) => {
+  const tasks = await tasksCollection.find({ client_email: email }).toArray();
+  return tasks.map(task => ({
+    ...task,
+    _id: task._id.toString(),
+    createdAt: task.createdAt?.toISOString() || null,
+  }));
+};
+ 
+const updateTaskInDB = async (id, data) => {
+  const { title, category, description, budget, deadline } = data;
+  await tasksCollection.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: { title, category, description, budget, deadline, updatedAt: new Date() } }
+  );
+  return { id };
+};
+ 
+const deleteTaskFromDB = async (id) => {
+  await tasksCollection.deleteOne({ _id: new ObjectId(id) });
+};
+
+
 export const tasksService = {
   getAllTasksFromDB,
   getTaskByIdFromDB,
   createTaskInDB,
+  getMyTasksFromDB,
+  updateTaskInDB,
+  deleteTaskFromDB
 };

@@ -1,4 +1,4 @@
-import { tasksCollection } from "../../db/db.js";
+import { proposalsCollection, tasksCollection } from "../../db/db.js";
 import { ObjectId } from "mongodb";
 
 const getAllTasksFromDB = async (search, category, limit, page = 1) => {
@@ -97,10 +97,12 @@ const deleteTaskFromDB = async (id) => {
 
  
 const getActiveTasksFromDB = async (freelancerEmail) => {
+
   const tasks = await tasksCollection
-    .find({ assignedFreelancer: freelancerEmail, status: "in-progress" })
+    .find({ assignedFreelancer: freelancerEmail, status: "in_progress" })
     .sort({ createdAt: -1 })
     .toArray();
+    console.log(tasks)
   return tasks.map((t) => ({ ...t, _id: t._id.toString() }));
 };
 
@@ -113,7 +115,8 @@ const getCompletedTasksFromDB = async (freelancerEmail) => {
   return tasks.map((t) => ({ ...t, _id: t._id.toString() }));
 };
  
-const updateTaskStatus = async (id, status) => {
+const updateTaskStatus = async (id, status, proposalId) => {
+  console.log(id, status, proposalId)
   const allowedStatus = [
     "open",
     "in_progress",
@@ -124,11 +127,20 @@ const updateTaskStatus = async (id, status) => {
     throw new Error("Invalid task status.");
   }
 
+  const proposal = await proposalsCollection.findOne({
+  _id: new ObjectId(proposalId),
+});
+
+if (!proposal) {
+  throw new Error("Proposal not found");
+}
+
   const result = await tasksCollection.updateOne(
     { _id: new ObjectId(id) },
     {
       $set: {
         status,
+        assignedFreelancer: proposal.freelancerEmail,
         updatedAt: new Date(),
       },
     }

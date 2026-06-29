@@ -106,10 +106,9 @@ const getCompletedTasks = async (req, res) => {
 const updateTaskStatus = async (req, res) => {
   try {
     const { id } = req.params;
-    const { status } = req.body;
+    const { status, proposalId } = req.body;
 
-    const result = await tasksService.updateTaskStatus(id, status);
-console.log(result)
+    const result = await tasksService.updateTaskStatus(id, status, proposalId);
     res.status(200).json({
       success: true,
       data: result,

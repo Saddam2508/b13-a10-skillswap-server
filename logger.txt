@@ -622,3 +622,109 @@ Method -> GET - Time -> 1782737187334 - URL -> /api/proposals?freelancerEmail=es
 Method -> GET - Time -> 1782737199034 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
 
 Method -> GET - Time -> 1782737204733 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782737705229 - URL -> /api/proposals?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737707170 - URL -> /api/proposals?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737708904 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737708909 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737715935 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737720140 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737721157 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737721161 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737724954 - URL -> /api/proposals?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737731363 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737731364 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737733395 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782737733397 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738019153 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738019173 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738019197 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738019174 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738166220 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738166226 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738217735 - URL -> /api/proposals?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738230338 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738230339 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738365748 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738365781 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738365959 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782738377405 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738377410 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738418327 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738418333 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738480033 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782738480049 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782740387005 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> PATCH - Time -> 1782740394525 - URL -> /api/proposals/6a41d869b64b1f187f122d44/accept
+
+Method -> PATCH - Time -> 1782740394936 - URL -> /api/tasks/6a4108cbc552813545eede6e/status
+
+Method -> GET - Time -> 1782740401936 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782740412650 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782740412653 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782740553759 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> PATCH - Time -> 1782740561703 - URL -> /api/proposals/6a41d869b64b1f187f122d44/accept
+
+Method -> PATCH - Time -> 1782740562097 - URL -> /api/tasks/6a4108cbc552813545eede6e/status
+
+Method -> GET - Time -> 1782740818560 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> PATCH - Time -> 1782740823688 - URL -> /api/proposals/6a41d869b64b1f187f122d44/accept
+
+Method -> PATCH - Time -> 1782740824091 - URL -> /api/tasks/6a4108cbc552813545eede6e/status
+
+Method -> GET - Time -> 1782740920907 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> PATCH - Time -> 1782740925648 - URL -> /api/proposals/6a41d869b64b1f187f122d44/accept
+
+Method -> PATCH - Time -> 1782740926016 - URL -> /api/tasks/6a4108cbc552813545eede6e/status
+
+Method -> GET - Time -> 1782740957288 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782740957292 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> PATCH - Time -> 1782740977421 - URL -> /api/tasks/6a4108cbc552813545eede6e/deliverable
+
+Method -> GET - Time -> 1782740977719 - URL -> /api/tasks/active?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782740977721 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782740989166 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782741080684 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com

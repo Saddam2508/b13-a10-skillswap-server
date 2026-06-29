@@ -95,11 +95,42 @@ const deleteTaskFromDB = async (id) => {
 };
 
 
+ 
+const getActiveTasksFromDB = async (freelancerEmail) => {
+  const tasks = await tasksCollection
+    .find({ assignedFreelancer: freelancerEmail, status: "in-progress" })
+    .sort({ createdAt: -1 })
+    .toArray();
+  return tasks.map((t) => ({ ...t, _id: t._id.toString() }));
+};
+
+
+const getCompletedTasksFromDB = async (freelancerEmail) => {
+  const tasks = await tasksCollection
+    .find({ assignedFreelancer: freelancerEmail, status: "completed" })
+    .sort({ updatedAt: -1 })
+    .toArray();
+  return tasks.map((t) => ({ ...t, _id: t._id.toString() }));
+};
+ 
+const submitDeliverableInDB = async (id, deliverableUrl) => {
+  await tasksCollection.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: { status: "completed", deliverable_url: deliverableUrl, completedAt: new Date() } }
+  );
+  return { id };
+};
+ 
+
+
 export const tasksService = {
   getAllTasksFromDB,
   getTaskByIdFromDB,
   createTaskInDB,
   getMyTasksFromDB,
   updateTaskInDB,
-  deleteTaskFromDB
+  deleteTaskFromDB,
+  getActiveTasksFromDB,
+  getCompletedTasksFromDB,
+  submitDeliverableInDB
 };

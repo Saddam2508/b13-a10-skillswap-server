@@ -83,11 +83,44 @@ const deleteTask = async (req, res) => {
 };
  
 
+
+const getActiveTasks = async (req, res) => {
+  try {
+    const result = await tasksService.getActiveTasksFromDB(req.query.freelancerEmail);
+    res.status(200).json({ success: true, data: result });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+ 
+const getCompletedTasks = async (req, res) => {
+  try {
+    const result = await tasksService.getCompletedTasksFromDB(req.query.freelancerEmail);
+    res.status(200).json({ success: true, data: result });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+ 
+const submitDeliverable = async (req, res) => {
+  try {
+    const result = await tasksService.submitDeliverableInDB(req.params.id, req.body.deliverableUrl);
+    res.status(200).json({ success: true, data: result });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+ 
+
+
 export const tasksController = {
   getAllTasks,
   getTaskById,
   createTask,
   getMyTasks,
   updateTask,
-  deleteTask
+  deleteTask,
+  getActiveTasks,
+  getCompletedTasks,
+  submitDeliverable
 };

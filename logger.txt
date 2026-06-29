@@ -740,3 +740,55 @@ Method -> GET - Time -> 1782742011280 - URL -> /api/tasks/my-tasks?email=eyarins
 Method -> GET - Time -> 1782742048063 - URL -> /api/tasks?limit=6
 
 Method -> GET - Time -> 1782742048068 - URL -> /api/users/freelancers/top?limit=6
+
+Method -> GET - Time -> 1782743864125 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782743876829 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782743877129 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782743877159 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782743880926 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782743881239 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782744574026 - URL -> /api/admin/stats
+
+Method -> GET - Time -> 1782744574873 - URL -> /api/admin/stats
+
+Method -> GET - Time -> 1782744690671 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782744701638 - URL -> /api/admin/stats
+
+Method -> GET - Time -> 1782745281875 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782745444595 - URL -> /api/admin/stats
+
+Method -> GET - Time -> 1782745444739 - URL -> /api/admin/stats
+
+Method -> GET - Time -> 1782745996639 - URL -> /api/admin/users
+
+Method -> GET - Time -> 1782746013799 - URL -> /api/admin/users
+
+Method -> PATCH - Time -> 1782746024404 - URL -> /api/admin/users/6a407b10018b6132a1ad1c0d/block
+
+Method -> GET - Time -> 1782746024686 - URL -> /api/admin/users
+
+Method -> PATCH - Time -> 1782746026822 - URL -> /api/admin/users/6a407b10018b6132a1ad1c0d/unblock
+
+Method -> GET - Time -> 1782746027077 - URL -> /api/admin/users
+
+Method -> GET - Time -> 1782746316926 - URL -> /api/admin/tasks
+
+Method -> DELETE - Time -> 1782746360253 - URL -> /api/admin/tasks/6a406517b5e6fa4a57ebe47b
+
+Method -> GET - Time -> 1782746360455 - URL -> /api/admin/tasks
+
+Method -> GET - Time -> 1782746716246 - URL -> /api/admin/transactions
+
+Method -> GET - Time -> 1782746787264 - URL -> /api/admin/transactions
+
+Method -> GET - Time -> 1782746845148 - URL -> /api/admin/transactions
+
+Method -> GET - Time -> 1782746886687 - URL -> /api/admin/transactions

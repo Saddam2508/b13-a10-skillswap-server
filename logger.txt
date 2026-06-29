@@ -728,3 +728,15 @@ Method -> GET - Time -> 1782740977721 - URL -> /api/tasks/completed?freelancerEm
 Method -> GET - Time -> 1782740989166 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
 
 Method -> GET - Time -> 1782741080684 - URL -> /api/tasks/completed?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782741999518 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782742008143 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782742010413 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782742011280 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782742048063 - URL -> /api/tasks?limit=6
+
+Method -> GET - Time -> 1782742048068 - URL -> /api/users/freelancers/top?limit=6

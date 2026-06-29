@@ -8,6 +8,8 @@ import globalErrorHandler from "./middleware/globalErrorHandler.js";
 import { tasksRoute } from "./modules/tasks/tasks.route.js";
 import { usersRoute } from "./modules/users/users.route.js";
 import { proposalsRoute } from "./modules/proposals/proposals.route.js";
+import { paymentRoute } from "./modules/payments/payment.route.js";
+import { adminRoute } from "./modules/admin/admin.route.js";
 
 const app = express();
 
@@ -38,6 +40,8 @@ app.get("/", (req, res) => {
 app.use("/api/tasks", tasksRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/proposals", proposalsRoute);
+app.use("/api/payments", paymentRoute);
+app.use("/api/admin", adminRoute);
 
 // Global Error Handling Middleware
 app.use(globalErrorHandler);

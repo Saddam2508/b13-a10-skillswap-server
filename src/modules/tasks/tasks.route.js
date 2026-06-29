@@ -11,7 +11,9 @@ router.get("/completed", tasksController.getCompletedTasks);
 router.get("/:id", tasksController.getTaskById);
 router.put("/:id", tasksController.updateTask);
 router.delete("/:id", tasksController.deleteTask);
-router.get("/:id", tasksController.getTaskById);            
+router.get("/:id", tasksController.getTaskById);
+
+router.patch("/:id/status", tasksController.updateTaskStatus);             
 router.patch("/:id/deliverable", tasksController.submitDeliverable);
 
 export const tasksRoute = router;

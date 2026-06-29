@@ -5,20 +5,27 @@ const getProposalsByClientEmailFromDB = async (clientEmail) => {
   const tasks = await tasksCollection
     .find({ client_email: clientEmail })
     .toArray();
-
-  const taskIds = tasks.map((t) => t._id.toString());
+  const taskIds = tasks.map((task) => task._id.toString());
 
   const proposals = await proposalsCollection
-    .find({ task_id: { $in: taskIds } })
-    .sort({ submitted_at: -1 })
+    .find({
+      taskId: { $in: taskIds },
+    })
+    .sort({
+      createdAt: -1,
+    })
     .toArray();
 
-  const result = proposals.map((proposal) => {
-    const task = tasks.find((t) => t._id.toString() === proposal.task_id);
-    return { ...proposal, task };
-  });
+  return proposals.map((proposal) => {
+    const task = tasks.find(
+      (t) => t._id.toString() === proposal.taskId
+    );
 
-  return result;
+    return {
+      ...proposal,
+      task,
+    };
+  });
 };
 
 const acceptProposalInDB = async (proposalId) => {

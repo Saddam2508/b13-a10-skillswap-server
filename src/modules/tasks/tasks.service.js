@@ -113,6 +113,36 @@ const getCompletedTasksFromDB = async (freelancerEmail) => {
   return tasks.map((t) => ({ ...t, _id: t._id.toString() }));
 };
  
+const updateTaskStatus = async (id, status) => {
+  const allowedStatus = [
+    "open",
+    "in_progress",
+    "completed",
+  ];
+
+  if (!allowedStatus.includes(status)) {
+    throw new Error("Invalid task status.");
+  }
+
+  const result = await tasksCollection.updateOne(
+    { _id: new ObjectId(id) },
+    {
+      $set: {
+        status,
+        updatedAt: new Date(),
+      },
+    }
+  );
+
+
+  if (result.matchedCount === 0) {
+    throw new Error("Task not found.");
+  }
+
+  return result;
+};
+
+
 const submitDeliverableInDB = async (id, deliverableUrl) => {
   await tasksCollection.updateOne(
     { _id: new ObjectId(id) },
@@ -132,5 +162,6 @@ export const tasksService = {
   deleteTaskFromDB,
   getActiveTasksFromDB,
   getCompletedTasksFromDB,
+  updateTaskStatus,
   submitDeliverableInDB
 };

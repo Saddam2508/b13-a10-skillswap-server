@@ -792,3 +792,111 @@ Method -> GET - Time -> 1782746787264 - URL -> /api/admin/transactions
 Method -> GET - Time -> 1782746845148 - URL -> /api/admin/transactions
 
 Method -> GET - Time -> 1782746886687 - URL -> /api/admin/transactions
+
+Method -> GET - Time -> 1782779654742 - URL -> /api/users/freelancers/top?limit=6
+
+Method -> GET - Time -> 1782779654800 - URL -> /api/tasks?limit=6
+
+Method -> GET - Time -> 1782780048670 - URL -> /api/tasks?limit=6
+
+Method -> GET - Time -> 1782780048681 - URL -> /api/users/freelancers/top?limit=6
+
+Method -> GET - Time -> 1782780074858 - URL -> /api/tasks/6a406517b5e6fa4a57ebe47a
+
+Method -> GET - Time -> 1782780349928 - URL -> /api/tasks?limit=6
+
+Method -> GET - Time -> 1782780349931 - URL -> /api/users/freelancers/top?limit=6
+
+Method -> GET - Time -> 1782780358945 - URL -> /api/admin/stats
+
+Method -> GET - Time -> 1782780365009 - URL -> /api/admin/users
+
+Method -> GET - Time -> 1782780373411 - URL -> /api/admin/tasks
+
+Method -> GET - Time -> 1782780380699 - URL -> /api/admin/transactions
+
+Method -> GET - Time -> 1782780394810 - URL -> /api/admin/users
+
+Method -> GET - Time -> 1782781048244 - URL -> /api/admin/payments
+
+Method -> GET - Time -> 1782782581895 - URL -> /api/tasks?limit=6
+
+Method -> GET - Time -> 1782782581919 - URL -> /api/users/freelancers/top?limit=6
+
+Method -> GET - Time -> 1782782686726 - URL -> /api/proposals?freelancerEmail=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782782708305 - URL -> /
+
+Method -> GET - Time -> 1782782708373 - URL -> /favicon.ico
+
+Method -> GET - Time -> 1782782713698 - URL -> /api/users/freelancers/top?limit=6
+
+Method -> GET - Time -> 1782782713697 - URL -> /api/tasks?limit=6
+
+Method -> GET - Time -> 1782782730661 - URL -> /api/tasks?limit=6
+
+Method -> GET - Time -> 1782782730662 - URL -> /api/users/freelancers/top?limit=6
+
+Method -> GET - Time -> 1782782736491 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782782782998 - URL -> /api/proposals?freelancerEmail=estabsat%40gmail.com
+
+Method -> POST - Time -> 1782782818836 - URL -> /api/tasks
+
+Method -> GET - Time -> 1782782819090 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782782838745 - URL -> /api/tasks?
+
+Method -> GET - Time -> 1782782845917 - URL -> /api/tasks/6a431b62bd8aaa5773c895d8
+
+Method -> GET - Time -> 1782782846748 - URL -> /api/proposals/check?taskId=6a431b62bd8aaa5773c895d8&email=estabsat%40gmail.com
+
+Method -> POST - Time -> 1782782860099 - URL -> /api/proposals
+
+Method -> GET - Time -> 1782782860327 - URL -> /api/tasks/6a431b62bd8aaa5773c895d8
+
+Method -> GET - Time -> 1782782860523 - URL -> /api/proposals/check?taskId=6a431b62bd8aaa5773c895d8&email=estabsat%40gmail.com
+
+Method -> GET - Time -> 1782782868135 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782782872259 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782782900306 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> PATCH - Time -> 1782784458640 - URL -> /api/proposals/6a431b8cbd8aaa5773c895d9/accept
+
+Method -> PATCH - Time -> 1782784458927 - URL -> /api/tasks/6a431b62bd8aaa5773c895d8/status
+
+Method -> GET - Time -> 1782784973116 - URL -> /api/admin/payments
+
+Method -> GET - Time -> 1782784974090 - URL -> /api/tasks/6a431b62bd8aaa5773c895d8
+
+Method -> GET - Time -> 1782785248318 - URL -> /api/tasks/my-tasks?email=eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782785268224 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> PATCH - Time -> 1782785318612 - URL -> /api/proposals/6a431b8cbd8aaa5773c895d9/accept
+
+Method -> PATCH - Time -> 1782785318910 - URL -> /api/tasks/6a431b62bd8aaa5773c895d8/status
+
+Method -> GET - Time -> 1782785324133 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> GET - Time -> 1782785565300 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> PATCH - Time -> 1782786009582 - URL -> /api/proposals/6a431b8cbd8aaa5773c895d9/accept
+
+Method -> PATCH - Time -> 1782786009973 - URL -> /api/tasks/6a431b62bd8aaa5773c895d8/status
+
+Method -> GET - Time -> 1782786014888 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> PATCH - Time -> 1782789206539 - URL -> /api/proposals/6a431b8cbd8aaa5773c895d9/accept
+
+Method -> PATCH - Time -> 1782789207130 - URL -> /api/tasks/6a431b62bd8aaa5773c895d8/status
+
+Method -> GET - Time -> 1782789552432 - URL -> /api/proposals/client/eyarinsultana@gmail.com
+
+Method -> PATCH - Time -> 1782789718171 - URL -> /api/proposals/6a431b8cbd8aaa5773c895d9/accept
+
+Method -> PATCH - Time -> 1782789718543 - URL -> /api/tasks/6a431b62bd8aaa5773c895d8/status
+
+Method -> GET - Time -> 1782789724196 - URL -> /api/proposals/client/eyarinsultana@gmail.com

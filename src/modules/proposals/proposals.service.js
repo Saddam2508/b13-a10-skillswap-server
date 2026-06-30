@@ -36,7 +36,7 @@ const acceptProposalInDB = async (proposalId) => {
   if (!proposal) throw new Error("Proposal not found");
 
   const alreadyAccepted = await proposalsCollection.findOne({
-    task_id: proposal.task_id,
+    taskId: proposal.taskId,
     status: "accepted",
   });
 
@@ -46,10 +46,14 @@ const acceptProposalInDB = async (proposalId) => {
 
   await proposalsCollection.updateOne(
     { _id: new ObjectId(proposalId) },
-    { $set: { status: "accepted" } },
+    { $set: { status: "accepted" } }
   );
 
-  return proposal;
+  const updatedProposal = await proposalsCollection.findOne({
+    _id: new ObjectId(proposalId),
+  });
+
+  return updatedProposal;
 };
 
 const rejectProposalInDB = async (proposalId) => {

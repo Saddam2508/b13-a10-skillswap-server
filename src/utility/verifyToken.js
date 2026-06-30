@@ -1,43 +1,34 @@
-import sendResponse from "./sendResponse";
-import { createRemoteJWKSet, jwtVerify } from "jose";
-import config from "../config";
-
-const JWKS = createRemoteJWKSet(new URL(`${config.client_uri}/api/auth/jwks`));
+import { sessionCollection, usersCollection } from "../db/db.js";
+import { ObjectId } from "mongodb"; 
 
 const verifyToken = async (req, res, next) => {
-  const authHeader = req.headers.authorization;
+  const authHeader = req.headers?.authorization;
 
   if (!authHeader) {
-    return sendResponse(res, {
-      statusCode: 401,
-      success: false,
-      message: "Unauthorized",
-    });
+    return res.status(401).send({ message: "Unauthorized access" });
   }
 
   const token = authHeader.split(" ")[1];
 
   if (!token) {
-    return sendResponse(res, {
-      statusCode: 401,
-      success: false,
-      message: "Unauthorized",
-    });
+    return res.status(401).send({ message: "Unauthorized access" });
   }
 
-  try {
-    const { payload } = await jwtVerify(token, JWKS);
+  const session = await sessionCollection.findOne({ token });
 
-    // req.user = payload
-
-    next();
-  } catch (error) {
-    return sendResponse(res, {
-      statusCode: 403,
-      success: false,
-      message: "Forbidden",
-    });
+  if (!session) {
+    return res.status(401).send({ message: "Unauthorized access" });
   }
+
+  const user = await usersCollection.findOne({
+    _id: new ObjectId(session.userId), // অথবা _id: session.userId
+  });
+
+  if (!user) {
+    return res.status(401).send({ message: "Unauthorized access" });
+  }
+  req.user = user;
+  next();
 };
 
 export default verifyToken;
